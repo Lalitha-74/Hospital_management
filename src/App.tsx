@@ -16,6 +16,7 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { Footer } from './components/Footer';
 import { AmbulanceModal } from './components/AmbulanceModal';
 import { FloatingActions } from './components/FloatingActions';
+import { N8nChatWidget } from './components/N8nChatWidget';
 import { HOSPITAL_INFO } from './data/mockData';
 
 export default function App() {
@@ -179,7 +180,12 @@ export default function App() {
         onOpenAmbulance={() => setIsAmbulanceModalOpen(true)}
       />
 
-      {/* 5. 24/7 Emergency Ambulance GPS Tracking & Responder Modal */}
+      {/* 5. n8n AI Chatbot Widget */}
+      <N8nChatWidget
+        language={language}
+      />
+
+      {/* 6. 24/7 Emergency Ambulance GPS Tracking & Responder Modal */}
       <AmbulanceModal
         isOpen={isAmbulanceModalOpen}
         onClose={() => setIsAmbulanceModalOpen(false)}

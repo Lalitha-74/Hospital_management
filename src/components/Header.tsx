@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Ambulance, Clock, ShieldCheck, Heart, MessageCircle } from 'lucide-react';
+import { Phone, Ambulance, Clock, ShieldCheck, Heart, MessageCircle, Bot } from 'lucide-react';
 import { Language, ActivePage } from '../types';
 import { HOSPITAL_INFO } from '../data/mockData';
 import { t } from '../i18n/translations';
@@ -153,6 +153,16 @@ export const Header: React.FC<HeaderProps> = ({
                 తెలుగు
               </button>
             </div>
+
+            {/* AI Assistant Chatbot Button */}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-n8n-chat'))}
+              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-950/60 hover:bg-purple-900/60 text-purple-300 hover:text-purple-100 text-xs font-bold border border-purple-500/30 transition cursor-pointer"
+              title="Chat with Lifeline AI Assistant"
+            >
+              <Bot className="w-3.5 h-3.5 text-purple-400" />
+              <span>{language === 'te' ? 'AI చాట్' : 'AI Chat'}</span>
+            </button>
 
             {/* Quick Call for Mobile/Desktop */}
             <a
