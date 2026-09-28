@@ -1,0 +1,7 @@
+{
+  "name": "Lifeline Hospital - 24/7 Multi-Speciality Healthcare & Online OP Portal",
+  "description": "Lifeline Hospital premier multi-speciality care in Andhra & Telangana. Book instant OP appointments, view specialist doctor timings, 24/7 emergency ambulance tracking, Aarogyasri cashless insurance, and health checkup packages.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
